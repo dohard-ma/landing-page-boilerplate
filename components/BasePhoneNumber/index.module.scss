@@ -1,0 +1,45 @@
+@height: 5.6rem;
+
+.base-input-number-container {
+    width: 100%;
+
+    .input-box {
+        border-bottom: 1px solid #eaeaea;
+        display: flex;
+        align-items: center;
+
+        :global {
+            .h5d-input-main {
+                flex: 1;
+            }
+        }
+
+        .input-icon {
+            font-size: 2.4rem;
+            color: #c6c6c6;
+        }
+    }
+
+    .input-box-err {
+        border-bottom: 1px solid red;
+    }
+
+    :global {
+        .h5d-input-main {
+            flex: 1;
+
+            .adm-input {
+                input::placeholder {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    .error-text {
+        margin-top: 0.8rem;
+        color: red;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+}

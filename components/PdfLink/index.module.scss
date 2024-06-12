@@ -1,0 +1,21 @@
+.container {
+  display: inline-block;
+
+  .main {
+    .link {
+      text-decoration: underline;
+      color: red;
+    }
+    .pdf-wrapper {
+      height: 100%;
+      padding: 1.6rem;
+
+      .pdf-inner {
+        overflow-y: scroll;
+        height: 100%;
+        border: solid 1px #e5e5e5;
+      }
+    }
+  }
+}
+

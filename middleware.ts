@@ -1,20 +1,18 @@
-import { locales } from "./lib/i18n";
-
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  const isExit = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
+  console.log("--------pathname", pathname);
 
-  if (isExit) return;
+  // 设置 pathname 到请求头
+  const response = NextResponse.next();
+  response.headers.set("x-pathname", pathname);
 
-  request.nextUrl.pathname = `/`;
-  return Response.redirect(request.nextUrl);
+  return response;
 }
 
 export const config = {
   matcher: ["/((?!_next)(?!.*\\.(?:ico|png|svg|jpg|jpeg|xml|txt)$)(?!/api).*)"],
 };
+

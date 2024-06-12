@@ -1,0 +1,63 @@
+.container {
+    .main {
+        :global {
+            .adm-tabs-header {
+                border-bottom: 0;
+            }
+
+            .adm-tabs-content {
+                padding: 0.8rem 0;
+            }
+
+            .adm-list-item {
+                padding: 0;
+            }
+
+            .adm-tabs-tab-wrapper {
+                padding: 0px;
+                margin-right: 2.4rem;
+            }
+        }
+
+        .tabs-phone-box,
+        .tabs-email-box {
+            padding: 0;
+        }
+
+        .password-input-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .password-input {
+                :global .input-box {
+                    height: 6rem;
+                }
+            }
+        }
+
+        .tabs-email-box {
+            :global .input-box {
+                height: 6rem;
+            }
+        }
+
+        .tabs-phone-box {
+            :global .h5d-phoneNumber-main {
+                .h5d-phoneNumber-box {
+                    height: 6rem;
+                }
+            }
+        }
+
+        .sign {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 1.6rem;
+            margin-top: 1.2rem;
+        }
+    }
+}
